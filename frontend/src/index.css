@@ -1,0 +1,21 @@
+/* Tailwind CSS directives below are required for Tailwind to work.
+   If you see 'Unknown at rule @tailwind' warnings, you can ignore them.
+   For best experience, install the Tailwind CSS IntelliSense extension in your editor.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
