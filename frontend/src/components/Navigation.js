@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: 'Citizen Brief', path: '/citizen-brief' },
     { name: 'Contact', path: '/contact' },
     { name: 'Demo', path: '/demo' },
+    { name: 'Active War Simulation', path: '/war-simulation' },
   ];
 
   return (

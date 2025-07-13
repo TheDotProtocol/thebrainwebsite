@@ -53,6 +53,144 @@ body {
   }
 }
 
+/* Demo-specific animations */
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Radar and enhanced animations */
+@keyframes radarPing {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes radarRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes typing {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+@keyframes alertPulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+}
+
+/* Animation classes */
+.animate-scan {
+  animation: scan 3s linear infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-radar-ping {
+  animation: radarPing 2s ease-out infinite;
+}
+
+.animate-radar-rotate {
+  animation: radarRotate 4s linear infinite;
+}
+
+.animate-typing {
+  animation: typing 1.5s ease-in-out infinite;
+}
+
+.animate-alert-pulse {
+  animation: alertPulse 2s ease-in-out infinite;
+}
+
+/* Duration utilities */
+.duration-2000 {
+  transition-duration: 2000ms;
+}
+
+/* Enhanced hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Radar cone effect */
+.radar-cone {
+  position: relative;
+}
+
+.radar-cone::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid rgba(255, 215, 0, 0.1);
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: radarRotate 4s linear infinite;
+}
+
 .glass-morphism {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);

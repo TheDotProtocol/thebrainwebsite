@@ -7,6 +7,7 @@ import Modules from "./components/Modules";
 import CitizenBrief from "./components/CitizenBrief";
 import Contact from "./components/Contact";
 import Demo from "./components/Demo";
+import WarSimulation from "./components/WarSimulation";
 import Navigation from "./components/Navigation";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/citizen-brief" element={<CitizenBrief />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/demo" element={<Demo />} />
+          <Route path="/war-simulation" element={<WarSimulation />} />
         </Routes>
       </BrowserRouter>
     </div>
